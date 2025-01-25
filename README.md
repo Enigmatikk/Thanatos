@@ -56,8 +56,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/thanatos.git
-cd thanatos
+git clone https://github.com/Enigmatikk/Thanatos.git
+cd Thanatos
 ```
 
 3. Build and run:
