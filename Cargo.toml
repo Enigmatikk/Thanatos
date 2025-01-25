@@ -1,0 +1,48 @@
+[package]
+name = "thanatos"
+version = "0.1.0"
+edition = "2021"
+authors = ["Enigmatikk"]
+description = "Advanced Memory Forensics Framework"
+
+[dependencies]
+base64 = "0.13"
+eframe = { version = "0.24.0", features = ["persistence"] }
+egui = "0.24.0"
+egui_extras = { version = "0.24.0", features = ["image"] }
+anyhow = "1.0"
+notify = "6.1"
+lazy_static = "1.4"
+rfd = "0.12"
+crossbeam-channel = "0.5"
+ntapi = "0.4"
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_System_Memory",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_Security",
+    "Win32_System_LibraryLoader",
+    "Win32_System_SystemInformation",
+    "Win32_System_Kernel"
+]}
+hex = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+flate2 = "1.0"
+regex = "1.0"
+winapi = { version = "0.3", features = ["winuser", "windef"] }
+image = { version = "0.24", features = ["jpeg", "png"] }
+
+[build-dependencies]
+windows = "0.52"
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
