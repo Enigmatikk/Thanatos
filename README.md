@@ -51,12 +51,12 @@ Thanatos is a lightweight, Windows-focused memory analysis and process inspectio
 ### Build from Source
 1. Install Rust:
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+https://rustup.rs/
 ```
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/thanatos.git
+git clone https://github.com/enigmatikk/thanatos.git
 cd thanatos
 ```
 
